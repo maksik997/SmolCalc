@@ -123,59 +123,6 @@ public class ButtonPanel extends JPanel {
 
             attachListener(button, al);
         }
-
-//        int cols = 0, rows = 0;
-//        for (int i = 0; i < dim; i++) {
-//            if(cols % 4 == 0 && i != 0) {
-//                rows++;
-//            }
-//            int finalRows = rows;
-//            int finalCols = cols;
-//
-//            createButton(buttonSequence[rows%5][cols++%4]);
-//
-//            buttons.get(i).addActionListener(e -> {
-//                String s = buttonSequence[finalRows%5][finalCols%4];
-//                if (s.equals("C")) {
-//                    logic.setBuffer(new ArrayList<>());
-//                    logic.getDisplay().setText("0");
-//                }else if(s.equals("CE")){
-//                    System.out.println("Not-functional");
-//                } else if (s.equals("+/-")) {
-//                    if(logic.getDisplay().getText().matches("\\-\\w+"))
-//                        logic.getDisplay().setText(logic.getDisplay().getText().replace("-",""));
-//                    else
-//                        logic.getDisplay().setText("-"+logic.getDisplay().getText());
-//                } else if (s.equals("‹-")) {
-//                    logic.getDisplay().setText(
-//                        logic.getDisplay().getText().substring(
-//                            0,
-//                            logic.getDisplay().getText().length()-1)
-//                    );
-//                } else if(s.matches("[\\+\\-÷x]")){
-//                    System.out.println("Not-functional");
-////                    logic.getBuffer().add(" " + s + " ");
-////                    logic.getDisplay().setText("0");
-//                } else if (s.equals("=")) {
-//                    System.out.println("Not-functional");
-////                    logic.calcBuffer();
-////                    logic.getDisplay().setText(logic.getBuffer().get(0));
-//                } else if (s.equals(".")) {
-//                    if(!logic.getDisplay().getText().matches("-?\\d+\\.\\d*")){
-//                        if (logic.getDisplay().getText().equals("0"))
-//                            logic.getDisplay().setText("0" + s);
-//                        else
-//                            logic.getDisplay().setText(logic.getDisplay().getText() + s);
-//                    }
-//                } else{
-//                    if (logic.getDisplay().getText().equals("0"))
-//                        logic.getDisplay().setText(s);
-//                    else
-//                        logic.getDisplay().setText(logic.getDisplay().getText() + s);
-//                }
-//
-//            });
-//        }
     }
 
     public void createButton(String s){
